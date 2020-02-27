@@ -1,0 +1,32 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2> Lista de animais </h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nome:</th>
+            <th>Nome do Pai:</th>
+            <th>Nome da Mae:</th>
+            <th>Especie:</th>
+            <th>Sexo:</th>
+            <th>Nascimento:</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let animais of animaisdetalhe | async">
+            <td>{{animais.nome}}</td>
+            <td>{{animais.nome_pai}}</td>
+            <td>{{animais.nome_mae}}</td>
+            <td>{{animais.especie}}</td>
+            <td>{{vanimaissexo}}</td>
+            <td>{{animais.nascimento}}</td>
+            <td><button (click)="deletaranimail(animais.id)" class="btn btn-danger">Deletar</button>
+                <button (click)="animaisdetalhe(animais.id)" class="btn btn-info" style="margin-left: 10px">Detalhes</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

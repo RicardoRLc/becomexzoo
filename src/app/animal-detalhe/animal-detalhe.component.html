@@ -1,0 +1,28 @@
+<h2>Detalhes do Animal</h2>
+
+<hr />
+<div *ngIf="animal">
+    <div>
+        <label><b>Nome: </b></label> {{animal.nome}}
+    </div>
+    <div>
+        <label><b>Nome do Pai: </b></label> {{animal.nome_pai}}
+    </div>
+    <div>
+        <label><b>Nome da Mae: </b></label> {{animal.nome_mae}}
+    </div>
+</div>
+<div>
+    <label><b>Especie: </b></label> {{animal.especie}}
+</div>
+<div>
+    <label><b>Sexo: </b></label> {{animal.sexo}}
+</div>
+<div>
+    <label><b>Nascimento: </b></label> {{animal.nascimento}}
+</div>
+<div>
+
+    <br>
+    <br>
+    <button type="button" (click)="listaAnimal()" class="btn btn-primary">Voltar a lista de animais</button><br>

@@ -1,0 +1,73 @@
+<h3>Editar Animal</h3>
+<div [hidden]="submitted" style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" class="form-control" id="nome" required [(ngModel)]="animal.nome" name="nome">
+        </div>
+
+        <div class="form-group">
+            <label for="nome_pai">Nome do Pai</label>
+            <input type="text" class="form-control" id="nome_pai" required [(ngModel)]="animal.nome_pai"
+                name="nome_pai">
+        </div>
+
+        <div class="form-group">
+            <label for="nome_mae">Nome da Mâe</label>
+            <input type="text" class="form-control" id="nome_mae" required [(ngModel)]="animal.nome_mae"
+                name="nome_mae">
+        </div>
+
+       
+        <div class="form-group">
+            <label>Espécie</label>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="especie" id="arara" [value]="1">
+                <label class="form-check-label" for="Arara">Arara</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="especie" id="cavalo" [value]="2">
+                <label class="form-check-label" for="Cavalo">Cavalo</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="especie" id="girafa" [value]="3">
+                <label class="form-check-label" for="Girafa">Girafa</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="especie" id="orangutango" [value]="4">
+                <label class="form-check-label" for="orangutango">Orangutango</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="especie" id="leao" [value]="5">
+                <label class="form-check-label" for="leao">Leao</label>
+            </div>
+
+        </div>
+
+          <hr>
+
+        <div class="form-group">
+            <label>Gênero</label>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="genero" id="masculino" [value]="1">
+                <label class="form-check-label" for="masculino">Macho</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="genero" id="feminino" [value]="2">
+                <label class="form-check-label" for="feminino">Femea</label>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="form-group">
+            <label for="nascimento">Data de nascimento</label>
+            <input type="date" class="form-control" name="nascimento" id="nascimento">
+        </div>
+
+
+        <button type="submit" class="btn btn-success">Editar</button>
+    </form>
+</div>
